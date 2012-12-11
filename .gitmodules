@@ -1,6 +1,3 @@
 [submodule "pxe"]
 	path = pxe
 	url = https://github.com/maxenced/puppet-pxe.git
-[submodule "nginx"]
-	path = nginx
-	url = git@github.com:maxenced/puppet-nginx.git
