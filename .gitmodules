@@ -4,3 +4,6 @@
 [submodule "apache"]
 	path = apache
 	url = https://github.com/puppetlabs/puppetlabs-apache.git
+[submodule "stdlib"]
+	path = stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
