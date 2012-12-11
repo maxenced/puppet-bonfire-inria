@@ -1,3 +1,6 @@
 [submodule "pxe"]
 	path = pxe
 	url = https://github.com/maxenced/puppet-pxe.git
+[submodule "apache"]
+	path = apache
+	url = https://github.com/puppetlabs/puppetlabs-apache.git
