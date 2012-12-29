@@ -7,3 +7,6 @@
 [submodule "stdlib"]
 	path = stdlib
 	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "dashboard"]
+	path = dashboard
+	url = https://github.com/puppetlabs/puppetlabs-dashboard.git
