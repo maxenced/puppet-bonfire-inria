@@ -10,3 +10,6 @@
 [submodule "dashboard"]
 	path = dashboard
 	url = https://github.com/puppetlabs/puppetlabs-dashboard.git
+[submodule "nfs"]
+	path = nfs
+	url = git@github.com:maxenced/puppet-nfs.git
