@@ -13,3 +13,6 @@
 [submodule "nfs"]
 	path = nfs
 	url = git@github.com:maxenced/puppet-nfs.git
+[submodule "puppetdb"]
+	path = puppetdb
+	url = https://github.com/puppetlabs/puppetlabs-puppetdb.git
