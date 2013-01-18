@@ -16,3 +16,6 @@
 [submodule "puppetdb"]
 	path = puppetdb
 	url = https://github.com/puppetlabs/puppetlabs-puppetdb.git
+[submodule "postgresql"]
+	path = postgresql
+	url = https://github.com/puppetlabs/puppet-postgresql.git
