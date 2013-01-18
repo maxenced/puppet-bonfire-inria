@@ -19,3 +19,6 @@
 [submodule "postgresql"]
 	path = postgresql
 	url = https://github.com/puppetlabs/puppet-postgresql.git
+[submodule "inifile"]
+	path = inifile
+	url = https://github.com/cprice-puppet/puppetlabs-inifile.git
