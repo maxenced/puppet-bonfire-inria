@@ -42,7 +42,7 @@ class megaraid::install::debian {
         target => "/opt/MegaRAID/MegaCLI/${target}"
     }
 
-    exec { 'install MegaCLi':
+    exec { 'install MegaCli':
         command       => 'dpkg -i /opt/*deb'
     }
 }
