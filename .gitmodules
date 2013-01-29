@@ -22,3 +22,6 @@
 [submodule "inifile"]
 	path = inifile
 	url = https://github.com/cprice-puppet/puppetlabs-inifile.git
+[submodule "inriadoc"]
+	path = inriadoc
+	url = ssh://root@puppet.bonfire.grid5000.fr/etc/puppet/modules_inria/inriadoc
