@@ -39,7 +39,7 @@ class megaraid::install::debian {
 
     file { '/usr/sbin/MegaCli':
         ensure => link,
-        target => "/opt/MegaRAID/MegaCLI/${target}"
+        target => "/opt/MegaRAID/MegaCli/${target}"
     }
 
     exec { 'install MegaCli':
