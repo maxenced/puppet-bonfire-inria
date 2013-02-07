@@ -15,8 +15,7 @@ class icinga {
         hasstatus  => true,
         hasrestart => false,
         subscribe  => [ File [ '/etc/icinga/icinga.cfg' ], File['/var/lib/icinga/rw/icinga.cmd'] ],
-        #start     => 'chmod '0644' /etc/icinga/*.cfg;icinga -v /etc/icinga/icinga.cfg && service icinga start',
-        start      => 'icinga -v /etc/icinga/icinga.cfg && service icinga start',
+        start      => 'chmod 644 /etc/icinga/*.cfg;icinga -v /etc/icinga/icinga.cfg && service icinga start',
     }
 
     file { '/etc/apache2/conf.d/icinga.conf':
