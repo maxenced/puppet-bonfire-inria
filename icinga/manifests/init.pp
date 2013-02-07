@@ -3,7 +3,8 @@ class icinga {
     include icinga::commands
     include icinga::templates
     include icinga::timeperiods
-    include apache2::server
+    include icinga::itarget
+    include apache
 
     package { 'icinga':
         ensure => installed;
