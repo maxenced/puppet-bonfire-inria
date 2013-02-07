@@ -24,8 +24,8 @@ DISABLE=0
 DESC="report nagios alert on irc"
 NAME=nagircbot
 DAEMON=/usr/local/bin/nagircbot
-PARAMS='-f /var/lib/icinga/status.dat  -X -s irc.freenode.net:6667 -c #ubuntu-fr-sysadmin -u ufr-infra-bot  -z nagios'
-HL='zed,Sp4rKy:'
+PARAMS='-f /var/lib/icinga/status.dat  -X -s irc.freenode.net:6667 -c #channel -u nickname  -z password'
+HL='<%= admins %>:'
 PIDFILE=/var/run/nagircbot.pid
 
 MAXWAIT=30
