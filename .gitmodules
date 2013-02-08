@@ -18,7 +18,7 @@
 	url = https://github.com/maxenced/puppetdb.git
 [submodule "postgresql"]
 	path = postgresql
-	url = https://github.com/puppetlabs/puppet-postgresql.git
+	url = https://github.com/maxenced/puppet-postgresql.git
 [submodule "inifile"]
 	path = inifile
 	url = https://github.com/cprice-puppet/puppetlabs-inifile.git
