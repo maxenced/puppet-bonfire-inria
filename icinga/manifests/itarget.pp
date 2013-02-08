@@ -43,6 +43,13 @@ class icinga::itarget {
                     ensure => installed,
             }
         }
+        CentOS: {
+            package {
+                [ 'nagios-plugins-all', 'nagios-nsca']:
+                    ensure => installed,
+            }
+        }
+
         default: {
             fail('Distribution not supported')
         }
