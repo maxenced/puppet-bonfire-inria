@@ -107,8 +107,10 @@ class icinga::itarget {
         service_description => 'Status of last puppet run',
     }
 
-    sudo::directive { '00_nagios_sudo':
-        ensure  => present,
-        content => 'Cmnd_Alias NAGIOS_CMDS = /usr/lib/nagios/plugins/check_mysql, /usr/local/bin/check_nullmailer, /usr/local/bin/check_backuppc, /usr/lib/nagios/plugins/check_file_age, /bin/grep, /usr/lib/nagios/plugins/check_swap, /usr/local/bin/check_md_raid\nnagios ALL=(root) NOPASSWD: NAGIOS_CMDS'
+    if defined('sudo::directive') {
+        sudo::directive { '00_nagios_sudo':
+            ensure  => present,
+            content => 'Cmnd_Alias NAGIOS_CMDS = /usr/lib/nagios/plugins/check_mysql, /usr/local/bin/check_nullmailer, /usr/local/bin/check_backuppc, /usr/lib/nagios/plugins/check_file_age, /bin/grep, /usr/lib/nagios/plugins/check_swap, /usr/local/bin/check_md_raid\nnagios ALL=(root) NOPASSWD: NAGIOS_CMDS'
+        }
     }
 }
