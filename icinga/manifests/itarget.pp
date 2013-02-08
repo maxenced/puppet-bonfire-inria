@@ -48,6 +48,15 @@ class icinga::itarget {
                 [ 'nagios-plugins-all', 'nagios-nsca']:
                     ensure => installed,
             }
+            if $::architecture == 'x86_64' {
+                file { '/usr/lib/nagios':
+                    ensure => directory
+                }
+                file { '/usr/lib/nagios/plugins':
+                    ensure => link,
+                    target => '/usr/lib64/nagios/plugins/'
+                }
+            }
         }
 
         default: {
