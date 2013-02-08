@@ -53,9 +53,4 @@ class icinga::commands {
         command_line => "\$USER1\$/check_by_ssh -p \$ARG1\$ -o 'StrictHostKeyChecking=no'  -H \$HOSTADDRESS\$ -C 'sudo /usr/local/bin/check_md_raid'",
         ensure       => present,
     }
-
-    nagios_command { 'check_tcp':
-        command_line => "\$USER1\$/check_tcp -H \$HOSTADDRESS\$ -4 -p \$ARG1\$",
-        ensure       => present
-    }
 }
