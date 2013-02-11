@@ -3,6 +3,7 @@ class icinga {
     include icinga::commands
     include icinga::templates
     include icinga::timeperiods
+    include icinga::contacts
     include icinga::itarget
     include apache
 
