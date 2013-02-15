@@ -12,7 +12,7 @@
 	url = https://github.com/puppetlabs/puppetlabs-dashboard.git
 [submodule "nfs"]
 	path = nfs
-	url = git@github.com:maxenced/puppet-nfs.git
+	url = https://github.com/maxenced/puppet-nfs.git
 [submodule "puppetdb"]
 	path = puppetdb
 	url = https://github.com/maxenced/puppetdb.git
