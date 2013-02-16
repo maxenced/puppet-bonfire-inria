@@ -3,11 +3,11 @@ class icinga::commands {
 # notification
 ###
     nagios_command { 'host-notify-by-email':
-        command_line => "/usr/bin/printf '%b' \"\"\"***** Icinga *****\\n\\nNotification Type: \$NOTIFICATIONTYPE\$\\nHost: \$HOSTNAME\$\\nState: \$HOSTSTATE\$\\nAddress: \$HOSTADDRESS\$\\nInfo: \$HOSTOUTPUT\$\\n\\nDate/Time: \$LONGDATETIME\$\\n\"\"\" | /usr/bin/mail -s '** \$NOTIFICATIONTYPE\$ Host Alert: \$HOSTNAME\$ is \$HOSTSTATE\$ **' \$CONTACTEMAIL$",
+        command_line => "/usr/bin/printf '%b' \"\"\"***** Icinga *****\\n\\nNotification Type: \$NOTIFICATIONTYPE\$\\nHost: \$HOSTNAME\$\\nState: \$HOSTSTATE\$\\nAddress: \$HOSTADDRESS\$\\nInfo: \$HOSTOUTPUT\$\\n\\nDate/Time: \$LONGDATETIME\$\\n\"\"\" | /usr/bin/mail -s '[ICINGA] ** \$NOTIFICATIONTYPE\$ Host Alert: \$HOSTNAME\$ is \$HOSTSTATE\$ **' \$CONTACTEMAIL$",
         ensure       => present,
     }
     nagios_command { 'notify-by-email':
-        command_line => "/usr/bin/printf '%b' \"\"\"***** Icinga *****\\n\\nNotification Type: \$NOTIFICATIONTYPE\$\\n\\nService: \$SERVICEDESC\$\\nHost: \$HOSTALIAS\$\\nAddress: \$HOSTADDRESS\$\\nState: \$SERVICESTATE\$\\n\\nDate/Time: \$LONGDATETIME\$\\n\\nAdditional Info:\\n\\n\$SERVICEOUTPUT\$\\n\"\"\" | /usr/bin/mail -s '** \$NOTIFICATIONTYPE\$ Service Alert: \$HOSTALIAS\$/\$SERVICEDESC\$ is \$SERVICESTATE\$ **' \$CONTACTEMAIL$",
+        command_line => "/usr/bin/printf '%b' \"\"\"***** Icinga *****\\n\\nNotification Type: \$NOTIFICATIONTYPE\$\\n\\nService: \$SERVICEDESC\$\\nHost: \$HOSTALIAS\$\\nAddress: \$HOSTADDRESS\$\\nState: \$SERVICESTATE\$\\n\\nDate/Time: \$LONGDATETIME\$\\n\\nAdditional Info:\\n\\n\$SERVICEOUTPUT\$\\n\"\"\" | /usr/bin/mail -s '[ICINGA] ** \$NOTIFICATIONTYPE\$ Service Alert: \$HOSTALIAS\$/\$SERVICEDESC\$ is \$SERVICESTATE\$ **' \$CONTACTEMAIL$",
         ensure       => present,
     }
 
