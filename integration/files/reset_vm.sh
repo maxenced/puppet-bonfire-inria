@@ -8,7 +8,7 @@ else
     P=$(echo $1|cut -d'.' -f 1)
 fi
 case $P in
-    api|portal|mq|accounting)
+    api|portal|mq|accounting|cache)
     ;;
     *)
         echo "bad parameter"
